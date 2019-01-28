@@ -52,6 +52,7 @@ public class AnnotateObservation {
 		//Create Properties
 		Property prop_eep_madeBy = model.createProperty(PropertiesURI.getPropString_eep_madeBy());
 		Property prop_eep_onQuality = model.createProperty(PropertiesURI.getPropString_eep_onQuality());
+		Property prop_bot_containsElement = model.createProperty(PropertiesURI.getPropString_bot_containsElement());
 		Property prop_qudt_numValue = model.createProperty(PropertiesURI.getPropString_qudt_numValue());
 		Property prop_qudt_unit = model.createProperty(PropertiesURI.getPropString_qudt_unit());
 		Property prop_rc_hasResult =  model.createProperty(PropertiesURI.getPropString_rc_hasResult());
@@ -78,6 +79,10 @@ public class AnnotateObservation {
 							.addProperty(prop_qudt_unit, 
 									model.createResource(obs.obsUnit))
 				)
+			;
+			
+			model.getResource(obs.obsExecutorURI)
+				.addProperty(prop_bot_containsElement, obs.obsURI)
 			;
 		
 		}
