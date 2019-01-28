@@ -7,6 +7,6 @@ public class Sensor {
 	public String sensorName = new String();
 	public String sensorDesc = new String();
 	public String sensorAlt = new String();
-	public Quality[] observedQualityList = new Quality[]{};
+	public Quality observedQuality = new Quality();
 	
 }
