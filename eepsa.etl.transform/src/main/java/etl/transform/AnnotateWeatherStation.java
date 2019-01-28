@@ -97,25 +97,14 @@ public class AnnotateWeatherStation {
 								.addProperty(prop_geo_alt, 
 										model.createTypedLiteral(ws.stationSensorList[sensorIterator].sensorAlt,  XSDDatatype.XSDfloat))
 								.addProperty(prop_foaf_name, ws.stationSensorList[sensorIterator].sensorName)
+								.addProperty(prop_eep_forQuality, 
+										model.createResource(ws.stationURI + "_" + ws.stationSensorList[sensorIterator].observedQuality.qualityName)
+											.addProperty(RDF.type, 
+													model.createResource(ws.stationSensorList[sensorIterator].observedQuality.qualityURI)
+											)
+								)
 					)
 				;
-				
-				//Add sensor's observed qualities
-				for (int qualityIterator = 0;
-						qualityIterator < ws.stationSensorList[sensorIterator].observedQualityList.length;
-						qualityIterator++){
-					
-					Quality quality = ws.stationSensorList[sensorIterator].observedQualityList[qualityIterator];
-					
-					model.getResource(ws.stationSensorList[sensorIterator].sensorURI)
-						.addProperty(prop_eep_forQuality, 
-								model.createResource(ws.stationURI + "_" + quality.qualityName)
-									.addProperty(RDF.type, 
-											model.createResource(quality.qualityURI)
-									)
-						)
-					;
-				}
 			}
 		}
 		catch(Exception e){
