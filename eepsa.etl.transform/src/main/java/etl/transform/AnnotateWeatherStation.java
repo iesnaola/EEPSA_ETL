@@ -131,6 +131,7 @@ public class AnnotateWeatherStation {
 		model.setNsPrefix("dc", Namespaces.getNs_DC());
 		model.setNsPrefix("foaf", Namespaces.getNs_FOAF());
 		model.setNsPrefix("geo", Namespaces.getNs_GEO());
+		model.setNsPrefix("m3-lite", Namespaces.getNs_M3LITE());
 		model.setNsPrefix("xsd", Namespaces.getNs_XSD());
 		
 		log.debug("declareWeatherStationNamespaces: END");
