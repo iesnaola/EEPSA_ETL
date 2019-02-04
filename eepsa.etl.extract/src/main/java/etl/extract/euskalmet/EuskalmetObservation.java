@@ -4,6 +4,7 @@ public class EuskalmetObservation {
 
 	//XML Elements for Observations Information
 	private static String euskalmetObs_Month_Attr= "mes";
+	private static String euskalmetObs_StationID_Attr = "xsi:noNamespaceSchemaLocation";
 	private static String euskalmetObs_Day_Attr = "Dia";
 	private static String euskalmetObs_Day_Tag = "dia";
 	private static String euskalmetObs_Hour_Attr = "Hora";
@@ -13,6 +14,9 @@ public class EuskalmetObservation {
 	//Getters
 	public static String getEuskalmetObs_Month_Attr() {
 		return euskalmetObs_Month_Attr;
+	}
+	public static String getEuskalmetObs_StationID_Attr() {
+		return euskalmetObs_StationID_Attr;
 	}
 	public static String getEuskalmetObs_Day_Attr() {
 		return euskalmetObs_Day_Attr;
