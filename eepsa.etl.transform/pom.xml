@@ -18,6 +18,12 @@
 			<version>${eepsa.version}</version>
   		</dependency>
   		
+  		<dependency>
+			<groupId>eepsa</groupId>
+	  		<artifactId>etl.extract</artifactId>
+			<version>${eepsa.version}</version>
+  		</dependency>
+  		
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
